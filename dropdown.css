@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("Mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: sans-serif;
+}
+.main-menu {
+  background-color: #001309;
+  width: 100%;
+  height: 10vh;
+  opacity: 0.9;
+}
+.main-menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  text-transform: capitalize;
+}
+.main-menu ul li {
+  padding: 8px;
+  border-radius: 2px;
+  margin: 12px;
+}
+.main-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.active,
+.main-menu ul li:hover {
+  background-color: #009a00;
+}
+.sub-menu {
+  display: none;
+}
+.main-menu ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+}
+.main-menu ul li:hover .sub-menu ul {
+  display: block;
+  background: #479b99;
+}
+.main-menu ul li:hover .sub-menu ul li {
+  color: #ffe4c4;
+  border-bottom: 1px dotted #fff;
+  padding: 8px;
+  margin: 13px;
+  width: 120px;
+}
+/*To remove the border in the last item (last child)*/
+.main-menu ul li:hover .sub-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.sub-menu1 {
+  display: none;
+}
+.sub-menu ul li:hover .sub-menu1 {
+  display: block;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -40px;
+}
+.sub-menu ul li:hover .sub-menu1 ul {
+  display: block;
+  background: #479b99;
+}
